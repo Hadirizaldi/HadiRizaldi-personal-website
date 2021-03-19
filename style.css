@@ -126,7 +126,8 @@ section {
 
 .about,
 .services,
-.skills {
+.skills,
+.gallery {
   font-family: "Poppins", sans-serif;
 }
 
@@ -225,16 +226,19 @@ section .title::after {
 }
 
 /* Services */
-.services {
+.services,
+.gallery {
   color: #fff;
   background: #111;
 }
 
-.services .title::before {
+.services .title::before,
+.gallery .title::before {
   background: #fff;
 }
 
-.services .title::after {
+.services .title::after,
+.gallery .title::after {
   background: #111;
   content: "i offer to you";
 }
@@ -365,6 +369,80 @@ section .title::after {
 .skills .skills-content .right .dart::before {
   width: 35%;
 }
+
+/* Gallery */
+
+.gallery .title::after {
+  content: "my works";
+}
+
+.gallery .carousel .card {
+  background: #222;
+  border-radius: 8px;
+  padding: 25px 35px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.gallery .carousel .card:hover {
+  background: #ffd700;
+}
+
+.gallery .carousel .card .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery .carousel .card:hover .box {
+  transform: scale(1.05s);
+}
+
+.gallery .carousel .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+
+.gallery .carousel .card img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 5px solid #ffd700;
+  transition: all 0.3s ease;
+}
+
+.gallery .carousel .card:hover img {
+  border-color: #fff;
+}
+
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none !important;
+  border-radius: 50%;
+  border: #ffd700 2px solid !important;
+  transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+  width: 35px;
+  border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+  background: #ffd700 !important;
+}
+
 /* Responsive media */
 @media (max-width: 1300px) {
   .home .max-width {
