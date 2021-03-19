@@ -23,6 +23,14 @@ $(document).ready(function () {
     $(".menu-btn i").toggleClass("active");
   });
 
+  // untuk membuat tulisan ketikan
+  let typed = new Typed(".typing", {
+    strings: ["Student Collage", "Freelancer", "Math-Tutor"],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true,
+  });
+
   //   Script untuk aktif owl carousel
   $(".carousel").owlCarousel({
     margin: 20,
