@@ -5,6 +5,16 @@ $(document).ready(function () {
     } else {
       $(".navbar").removeClass("hidden");
     }
+    if (this.scrollY > 500) {
+      $(".scroll-up-btn").addClass("show");
+    } else {
+      $(".scroll-up-btn").removeClass("show");
+    }
+  });
+
+  // untuk slide ke atas
+  $(".scroll-up-btn").click(function () {
+    $("html").animate({ scrollTop: 0 });
   });
 
   //   Script buat toggle menu/navbar
