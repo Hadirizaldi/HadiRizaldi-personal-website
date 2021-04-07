@@ -1,14 +1,32 @@
+const colors = document.getElementsByClassName("colors");
+
+let i;
+for (i = 0; i < colors.length; i++) {
+  colors[i].addEventListener("click", changeColor);
+}
+
+function changeColor() {
+  let color = this.getAttribute("data-color");
+  document.documentElement.style.setProperty("--color", color);
+}
+
 $(document).ready(function () {
   $(window).scroll(function () {
     if (this.scrollY > 20) {
       $(".navbar").addClass("hidden");
+      $(".theme").addClass("gone");
     } else {
       $(".navbar").removeClass("hidden");
+      $(".theme").removeClass("gone");
     }
     if (this.scrollY > 500) {
       $(".scroll-up-btn").addClass("show");
     } else {
       $(".scroll-up-btn").removeClass("show");
+    }
+
+    if (this.scrollY < 20) {
+    } else {
     }
   });
 
@@ -52,4 +70,16 @@ $(document).ready(function () {
       },
     },
   });
+
+  // Change color theme
+  const colors = document.getElementByCl("colors");
+
+  for (let i = 0; i < colors.lenght; i++) {
+    colors[i].addEventListener("click", changeColor);
+  }
+
+  function changeColor() {
+    let color = this.getAttribute("data-color");
+    document.documentElement.style.setProperty("--color", color);
+  }
 });
